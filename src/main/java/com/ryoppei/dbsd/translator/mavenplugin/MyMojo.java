@@ -23,8 +23,6 @@ package com.ryoppei.dbsd.translator.mavenplugin;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 
-import java.io.File;
-
 /**
  * Goal which touches a timestamp file.
  *
@@ -35,18 +33,34 @@ import java.io.File;
 public class MyMojo
     extends AbstractMojo
 {
+
     /**
-     * Location of the file.
-     * @parameter expression="${project.build.directory}"
-     * @required
+     * @parameter
      */
-    private File outputDirectory;
+    private String outputFormat;
+    /**
+     * @parameter
+     */
+    private String inputFileName;
+    /**
+     * @parameter
+     */
+    private String outputFolder;
+    /**
+     * @parameter
+     */
+    private String outputFilePrefix;
+
+
 
     public void execute()
         throws MojoExecutionException
     {
 
-        getLog().info("..ÇÇÑÑÑÇÇ...............hello world");
+
+
+
+        getLog().info("!!!!!!!!!!!!"+ outputFormat +"^^^^" + inputFileName+"++++++" + outputFolder+",,,,," + outputFilePrefix + "...............hello world");
 
     }
 }
