@@ -20,6 +20,7 @@
 
 package com.ryoppei.dbsd.translator.mavenplugin;
 
+import com.ryoppei.dbsd.translator.DbsdConversor;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 
@@ -58,9 +59,18 @@ public class MyMojo
     {
 
 
+        final String[] args = convertToArray(outputFormat, inputFileName, outputFolder, outputFilePrefix);
+        DbsdConversor.main(args);
 
+        getLog().info("!!!!!!!!!!!!"+ outputFormat +"\n^^^^" + inputFileName+"\n++++++" + outputFolder+"\n,,,,," + outputFilePrefix + "...............hello world");
 
-        getLog().info("!!!!!!!!!!!!"+ outputFormat +"^^^^" + inputFileName+"++++++" + outputFolder+",,,,," + outputFilePrefix + "...............hello world");
+    }
 
+    private String[] convertToArray(final String ... args)
+    {
+        String[] result = new String[args.length];
+        System.arraycopy(args, 0, result, 0, args.length);
+
+        return result;
     }
 }
