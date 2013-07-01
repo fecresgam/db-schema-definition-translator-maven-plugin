@@ -29,12 +29,13 @@ import org.apache.maven.plugin.MojoExecutionException;
  *
  * @goal translate
  * 
- * @phase process-sources
+ * @phase process-resources
  */
 public class MyMojo
     extends AbstractMojo
 {
 
+    private static final String OUPTUP_FORMAT_FLAG = "-o";
     /**
      * @parameter
      */
@@ -58,11 +59,19 @@ public class MyMojo
         throws MojoExecutionException
     {
 
+        getLog().info("Translating " + inputFileName +
+                              " to '" + outputFormat +"' file(s): " +
+                              outputFolder+ outputFilePrefix + "-XXXXXX." + outputFormat );
 
-        final String[] args = convertToArray(outputFormat, inputFileName, outputFolder, outputFilePrefix);
+        final String[] args =
+                convertToArray(
+                        OUPTUP_FORMAT_FLAG,
+                        outputFormat,
+                        inputFileName,
+                        outputFolder,
+                        outputFilePrefix);
+
         DbsdConversor.main(args);
-
-        getLog().info("!!!!!!!!!!!!"+ outputFormat +"\n^^^^" + inputFileName+"\n++++++" + outputFolder+"\n,,,,," + outputFilePrefix + "...............hello world");
 
     }
 
