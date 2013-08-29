@@ -29,10 +29,10 @@ The following example shows how to configure the plugin to generate the diagrams
                      <id>translate_to_sql</id>
                      <phase>generate-sources</phase>
                      <configuration>
-                        <inputFileName>src/main/resources/nlp-messaging-manager.dbsd</inputFileName>
+                        <inputFileName>src/main/resources/test-project.dbsd</inputFileName>
                         <outputFormat>sql</outputFormat>
                         <outputFolder>${project.basedir}/src/main/sql/oracle/</outputFolder>
-                        <outputFilePrefix>nlp-messaging-manager</outputFilePrefix>
+                        <outputFilePrefix>test-project</outputFilePrefix>
                      </configuration>
                      <goals>
                         <goal>translate</goal>
@@ -42,10 +42,10 @@ The following example shows how to configure the plugin to generate the diagrams
                      <id>translate_to_img</id>
                      <phase>generate-resources</phase>
                      <configuration>
-                        <inputFileName>src/main/resources/nlp-messaging-manager.dbsd</inputFileName>
+                        <inputFileName>src/main/resources/test-project.dbsd</inputFileName>
                         <outputFormat>img</outputFormat>
                         <outputFolder>${project.basedir}/src/main/resources/</outputFolder>
-      	  	             <outputFilePrefix>nlp-messaging-manager</outputFilePrefix>
+      	  	             <outputFilePrefix>test-project</outputFilePrefix>
                      </configuration>
                      <goals>
                         <goal>translate</goal>
