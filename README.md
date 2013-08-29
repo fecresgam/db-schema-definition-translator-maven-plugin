@@ -6,7 +6,7 @@ Usage
 -----
 The configuration parameters are:
 * __inputFileName:__ The input file name (.dbsd)
-* __outputFormat:__ The output format. The available formats are;¡:
+* __outputFormat:__ The output format. The available formats are:
    * __img:__ Generates Graphviz dot diagrams.
    * __sql:__ Generates the DB creation PL/SQL scripts.
 * __outputFolder:__ The folder where the output files will be saved.
