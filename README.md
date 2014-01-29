@@ -13,6 +13,8 @@ The configuration parameters are:
 * __outputFilePrefix:__ The prefix to be used in the output file names.
 
 
+It triggered could be from command line using mvn dbsd:translate
+
 Example
 -------
 The following example shows how to configure the plugin to generate the diagrams and PL/SQL scripts.
