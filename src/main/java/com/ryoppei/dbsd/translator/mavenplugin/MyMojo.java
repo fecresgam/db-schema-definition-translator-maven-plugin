@@ -23,34 +23,30 @@ package com.ryoppei.dbsd.translator.mavenplugin;
 import com.ryoppei.dbsd.translator.DbsdConversor;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
+import org.apache.maven.plugins.annotations.Mojo;
+import org.apache.maven.plugins.annotations.Execute;
+import org.apache.maven.plugins.annotations.LifecyclePhase;
+import org.apache.maven.plugins.annotations.Parameter;
 
 /**
- * Goal which touches a timestamp file.
- *
- * @goal translate
- * 
- * @phase process-resources
+ * Launches DSBD.
+ * @see https://github.com/ryoppei/db-schema-definition-translator
  */
+@Mojo( name = "translate")
+@Execute(phase = LifecyclePhase.PROCESS_RESOURCES)
+
 public class MyMojo
     extends AbstractMojo
 {
 
     private static final String OUPTUP_FORMAT_FLAG = "-o";
-    /**
-     * @parameter
-     */
+    @Parameter
     private String outputFormat;
-    /**
-     * @parameter
-     */
+    @Parameter(required=true)
     private String inputFileName;
-    /**
-     * @parameter
-     */
+    @Parameter
     private String outputFolder;
-    /**
-     * @parameter
-     */
+    @Parameter(required=true)
     private String outputFilePrefix;
 
 
