@@ -4,7 +4,7 @@
   <groupId>db-schema-definition</groupId>
   <artifactId>db-schema-definition-translator-maven-plugin</artifactId>
   <packaging>maven-plugin</packaging>
-  <version>0.83b1</version>
+  <version>0.85-SNAPSHOT</version>
   <dependencies>
     <dependency>
       <groupId>db-schema-definition</groupId>
