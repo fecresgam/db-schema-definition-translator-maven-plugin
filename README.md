@@ -25,7 +25,7 @@ The following example shows how to configure the plugin to generate the diagrams
             <plugin>
                <groupId>db-schema-definition</groupId>
                <artifactId>db-schema-definition-translator-maven-plugin</artifactId>
-               <version>0.83</version>
+               <version>0.89</version>
                <executions>
                   <execution>
                      <id>translate_to_sql</id>
@@ -60,6 +60,6 @@ The following example shows how to configure the plugin to generate the diagrams
       </pluginManagement>
 
 
-[1]: https://github.com/ryoppei/db-schema-definition-translator  "DB Schema Definition Translator"
+[1]: https://github.com/fecresgam/db-schema-definition-translator  "DB Schema Definition Translator"
 
 

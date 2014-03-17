@@ -18,9 +18,9 @@
  *                                                                      *
  ************************************************************************/
 
-package com.ryoppei.dbsd.translator.mavenplugin;
+package com.fecresgam.dbsd.translator.mavenplugin;
 
-import com.ryoppei.dbsd.translator.DbsdConversor;
+import com.fecresgam.dbsd.translator.DbsdConversor;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.Mojo;
@@ -30,7 +30,7 @@ import org.apache.maven.plugins.annotations.Parameter;
 
 /**
  * Launches DSBD.
- * @see https://github.com/ryoppei/db-schema-definition-translator
+ * @see https://github.com/fecresgam/db-schema-definition-translator
  */
 @Mojo( name = "translate")
 @Execute(phase = LifecyclePhase.PROCESS_RESOURCES)
