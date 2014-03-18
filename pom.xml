@@ -40,7 +40,7 @@
     <dependency>
       <groupId>db-schema-definition</groupId>
       <artifactId>db-schema-definition-translator</artifactId>
-      <version>0.89</version>
+      <version>0.90</version>
     </dependency>
     <dependency>
       <groupId>org.apache.maven</groupId>
