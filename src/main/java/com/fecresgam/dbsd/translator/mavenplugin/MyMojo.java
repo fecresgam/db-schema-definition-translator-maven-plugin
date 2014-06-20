@@ -20,7 +20,10 @@
 
 package com.fecresgam.dbsd.translator.mavenplugin;
 
+import javax.annotation.concurrent.ThreadSafe;
+
 import com.fecresgam.dbsd.translator.DbsdConversor;
+
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.Mojo;
@@ -34,20 +37,15 @@ import org.apache.maven.plugins.annotations.Parameter;
  */
 @Mojo( name = "translate")
 @Execute(phase = LifecyclePhase.PROCESS_RESOURCES)
-
-public class MyMojo
-    extends AbstractMojo
+@ThreadSafe
+public class MyMojo   extends AbstractMojo
 {
 
     private static final String OUPTUP_FORMAT_FLAG = "-o";
-    @Parameter
-    private String outputFormat;
-    @Parameter(required=true)
-    private String inputFileName;
-    @Parameter
-    private String outputFolder;
-    @Parameter(required=true)
-    private String outputFilePrefix;
+    @Parameter                   private String outputFormat;
+    @Parameter(required=true)    private String inputFileName;
+    @Parameter                   private String outputFolder;
+    @Parameter(required=true)    private String outputFilePrefix;
 
 
 
