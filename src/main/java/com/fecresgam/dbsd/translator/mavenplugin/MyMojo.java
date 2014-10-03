@@ -6,13 +6,14 @@
  *   General Public License as published by the Free Software           *
  *   Foundation, either version 2 of the License, or any later version. *
  *                                                                      *
- *   Foobar is distributed in the hope that it will be useful,          *
- *   but WITHOUT ANY WARRANTY; without even the implied warranty of     *
- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the      *
- *   GNU General Public License for more details.                       *
+ *   DB Schema Definition Translator is distributed in the hope that it *
+ *   will be useful, but WITHOUT ANY WARRANTY; without even the implied *
+ *   warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   *
+ *   See the GNU General Public License for more details.               *
  *                                                                      *
  *   You should have received a copy of the GNU General Public License  *
- *   along with Foobar.  If not, see <http://www.gnu.org/licenses/>.    *
+ *   along with DB Schema Definition Translator.  If not,               *
+ *   see <http://www.gnu.org/licenses/>.                                *
  *                                                                      *
  *   Author: Felipe Crespo Gambade                                      *
  *                                                                      *
@@ -35,8 +36,7 @@ import org.apache.maven.plugins.annotations.Parameter;
  * Launches DSBD.
  * @see https://github.com/fecresgam/db-schema-definition-translator
  */
-@Mojo( name = "translate")
-@Execute(phase = LifecyclePhase.PROCESS_RESOURCES)
+@Mojo( name = "translate", defaultPhase = LifecyclePhase.GENERATE_SOURCES, threadSafe = true)
 @ThreadSafe
 public class MyMojo   extends AbstractMojo
 {
